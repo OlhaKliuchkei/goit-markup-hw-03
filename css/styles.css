@@ -19,7 +19,12 @@ p {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.list {
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+ul {
   list-style: none;
   padding: 0;
   margin-top: 0px;
@@ -45,7 +50,7 @@ p {
   padding: 0 15px;
   margin: 0 auto;
 }
-.section {
+section {
   padding: 94px 0;
 }
 
@@ -56,12 +61,8 @@ p {
 .container-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
-.header-wrap {
-  display: flex;
-  align-items: center;
-}
+
 .header-logo {
   font-family: Raleway;
   font-weight: 700;
@@ -92,6 +93,7 @@ p {
   color: var(--text-color);
 }
 .contact-list {
+  margin-left: auto;
   display: flex;
 }
 .contact-list .contact-item:not(:last-child) {
@@ -123,11 +125,9 @@ p {
   display: flex;
   background: var(--background-herofoot-color);
   height: 600px;
-  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 1600;
 }
 .hero-title {
   display: inline-block;
@@ -184,7 +184,10 @@ p {
   letter-spacing: 0.03em;
 }
 /*-----PROJECTS----*/
-.projects-title {
+.project-section {
+  padding-top: 0;
+}
+.project-title {
   font-family: inherit;
   font-weight: 700;
   font-size: 36px;
@@ -194,18 +197,16 @@ p {
   text-align: center;
   margin-bottom: 50px;
 }
-.projects-list {
+.project-list {
   display: flex;
   justify-content: center;
 }
-.projects-img:not(:last-child) {
+.project-img:not(:last-child) {
   margin-right: 30px;
 }
 /*------TEAM-------*/
-.container-team {
+.section-team {
   background-color: var(--team-background);
-  min-height: 648px;
-  width: 100%;
 }
 .team-title {
   font-family: inherit;
@@ -215,22 +216,19 @@ p {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--text-color);
-  padding-top: 94px;
   margin-bottom: 50px;
 }
 .team-list {
   display: flex;
-  justify-content: center;
 }
 .team-item {
   background-color: var(--white-color);
-  min-height: 368px;
 }
 .team-item:not(:last-child) {
   margin-right: 30px;
 }
-.team-photo {
-  margin-bottom: 30px;
+.teamtext-container {
+  padding: 30px 0;
 }
 .team-member-name {
   font-family: inherit;
@@ -252,7 +250,6 @@ p {
 /*------FOOTER------*/
 .footer {
   background-color: var(--background-herofoot-color);
-  width: 100%;
   padding: 60px 0;
 }
 .footer-logo {
@@ -283,6 +280,9 @@ p {
   color: rgba(255, 255, 255, 0.6);
   padding-bottom: 9px;
 }
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
+}
 /*------PORTFOLIO-NAVIGATION-------*/
 .btn-list {
   display: flex;
@@ -311,15 +311,19 @@ p {
   flex-wrap: wrap;
 }
 .examples-item {
-  border: 1px solid #eeeeee;
-  width: 370px;
   margin-bottom: 30px;
+}
+.examples-item:nth-child(n + 7) {
+  margin-bottom: 0;
 }
 .examples-item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
+
 .container-cardtext {
   padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
 .examples-header {
   font-family: inherit;
